@@ -33,8 +33,6 @@ public abstract class QueryResolver<T> {
     public abstract Query convertQuery(T request, QueryContext ctx, QueryResolverProvider provider);
 
     public boolean shouldResolve(T request, QueryContext ctx) {
-        Query.of((t) -> null);
-
         return Objects.nonNull(request);
     }
 }
